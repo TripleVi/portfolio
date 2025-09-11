@@ -5,6 +5,69 @@
 @plugin "daisyui";
 
 @layer base {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  h1,
+  .h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    @media (min-width: 1280px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  h2,
+  .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+    @media (min-width: 1280px) {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  h3,
+  .h3 {
+    font-size: calc(1.3rem + 0.6vw);
+    @media (min-width: 1280px) {
+      h3 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+    @media (min-width: 1280px) {
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.25rem;
+  }
+
+  h6,
+  .h6 {
+    font-size: 1rem;
+  }
+
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
     appearance: none;
@@ -12,6 +75,10 @@
   }
   input[type='number'] {
     appearance: textfield;
+  }
+
+  * {
+    @apply !scrollbar-thin scrollbar-track-base-200 scrollbar-thumb-neutral-400;
   }
 }
 
@@ -26,20 +93,20 @@
     max-width: 62rem;
   }
   @media (width >= 80rem /* 1280px */) {
-    max-width: 80rem;
+    max-width: 76rem;
   }
   @media (width >= 96rem /* 1536px */) {
     max-width: 91rem;
   }
   margin-inline: auto;
-  padding-inline: 0.75rem;
+  padding-inline: 1rem;
 }
 
-@utility card-title {
+/* @utility card-title {
   --cardtitle-leading: 1.2;
   font-weight: 500;
   line-height: var(--cardtitle-leading);
-}
+} */
 
 @utility absolute-x-center {
   position: absolute;
@@ -61,81 +128,7 @@
   --font-sans: 'Inter', sans-serif;
 }
 
-@layer utilities {
-  * {
-    @apply scrollbar-thin scrollbar-track-base-200 scrollbar-thumb-gray-200;
-  }
-
-  body * {
-    @apply scrollbar-track-base-100;
-  }
-}
-
 html {
-  font-weight: normal;
   font-optical-sizing: auto;
-}
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-h1,
-.h1 {
-  font-size: calc(1.375rem + 1.5vw);
-  @media (min-width: 1280px) {
-    font-size: 2.5rem;
-  }
-}
-
-h2,
-.h2 {
-  font-size: calc(1.325rem + 0.9vw);
-  @media (min-width: 1280px) {
-    h2 {
-      font-size: 2rem;
-    }
-  }
-}
-
-h3,
-.h3 {
-  font-size: calc(1.3rem + 0.6vw);
-  @media (min-width: 1280px) {
-    h3 {
-      font-size: 1.75rem;
-    }
-  }
-}
-
-h4,
-.h4 {
-  font-size: calc(1.275rem + 0.3vw);
-  @media (min-width: 1280px) {
-    h4 {
-      font-size: 1.5rem;
-    }
-  }
-}
-
-h5,
-.h5 {
-  font-size: 1.25rem;
-}
-
-h6,
-.h6 {
-  font-size: 1rem;
+  scroll-behavior: smooth;
 }
