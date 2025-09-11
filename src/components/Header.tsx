@@ -3,6 +3,8 @@ import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 
+type Theme = 'light' | 'dark'
+
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true)
   const [, setLastScrollY] = useState(0)
@@ -22,6 +24,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const getTheme = (): Theme => {
+    const media = window.matchMedia('(prefers-color-scheme: light)')
+    return media.matches ? 'dark' : 'light'
+    // media.addEventListener('change', e => {
+    //   console.log('System theme is now', e.matches ? 'dark' : 'light')
+    // })
+  }
+
   return (
     <header
       className={clsx(
@@ -31,7 +41,12 @@ const Header = () => {
     >
       <nav className="navbar container">
         <div className="navbar-start">
-          <Link to='/' className="font-bold text-2xl bg-clip-text bg-gradient-to-br from-secondary to-accent text-transparent">EmptyV</Link>
+          <Link
+            to="/"
+            className="bg-gradient-to-br from-blue-400 to-green-400 bg-clip-text text-2xl leading-none font-bold text-transparent"
+          >
+            EmptyV
+          </Link>
         </div>
         <div className="navbar-center flex">
           <ul className="menu menu-horizontal px-1">
@@ -57,7 +72,7 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           <label className="swap swap-rotate btn btn-ghost btn-circle">
-            <input type="checkbox" className="theme-controller" value="dark" />
+            <input type="checkbox" className="theme-controller" value={getTheme()} />
             <SunIcon className="swap-off h-5" />
             <MoonIcon className="swap-on h-5" />
           </label>

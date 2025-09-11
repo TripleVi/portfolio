@@ -21,7 +21,7 @@ import { useNavigate } from 'react-router'
 const HomePage = () => {
   const navigate = useNavigate()
 
-  const description = `Hi, I’m Vuong Vu - a Bachelor of Information Technology graduate from the University of Greenwich, Vietnam (Hanoi campus). I’m passionate about technology and curious about many different fields, but my main focus is on web and mobile development as a full-stack developer. I’m always eager to listen, learn, and improve myself.\n\nOutside of work, I enjoy reading about history, swimming, football, badminton, traveling across the country, gaming, and cooking.\n\nWelcome to my portfolio! Here, you’ll find highlights of my projects and experiences.\nFeel free to get in touch - I’m always excited to connect and collaborate.`
+  const description = `I graduated with a Bachelor's degree in Information Technology from the University of Greenwich, Vietnam (Hanoi campus). I am passionate about technology and curious about many different fields, but my main focus is currently on web and mobile development as a full-stack developer. I am always eager to listen, learn, and improve myself.\n\nOutside of work, I enjoy reading about history, swimming, football, badminton, traveling across the country, gaming, and cooking.\n\nWelcome to my portfolio! Here, you will find highlights of my projects and experiences.\nFeel free to get in touch - I am always excited to connect and collaborate.`
 
   return (
     <>
@@ -32,7 +32,7 @@ const HomePage = () => {
               <h1>
                 Hi. I'm <span className="text-primary">Vuong Vu</span>
               </h1>
-              <p>I'm a Full-Stack Developer</p>
+              <h5 className='mt-2 mb-6 text-primary'>Software Engineer</h5>
               <p className="text-justify whitespace-pre-wrap">{description}</p>
             </div>
             <div className="grid w-2/5 place-items-center">
@@ -43,13 +43,13 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="mt-10 flex items-center gap-x-6">
+          <div className="mt-12 flex items-center gap-x-6">
             <button
               className="btn btn-outline btn-primary"
               onClick={() => window.open(CVLink, '_blank', 'noopener,noreferrer')}
             >
               Résumé
-              <ArrowDownTrayIcon className="w-3.5" strokeWidth={2.5} />
+              <ArrowDownTrayIcon className="w-3.5" strokeWidth={2.0} />
             </button>
             <a href={GitHubLink} target="_blank" rel="noopener noreferrer">
               <img src={github} className="h-8" alt="github" />
@@ -64,42 +64,53 @@ const HomePage = () => {
         </Card>
       </section>
       <section id="education" className="min-h-dvh pt-8">
-        <h2 className="mb-14 text-center">Education</h2>
+        <h2 className="mb-8 text-center">Education</h2>
         <div className="grid justify-items-center">
           <Card className="flex items-center gap-x-6 transition-all duration-200 hover:-translate-y-2 hover:transform hover:shadow-md">
             <a href="https://greenwich.edu.vn" target="_blank" rel="noopener noreferrer">
               <img src={greenwich} className="w-16" alt="greenwich university" />
             </a>
             <div>
-              <h5>Greenwich Vietnam</h5>
-              <p>Bachelor of Information Technology</p>
+              <h5>Bachelor of Information Technology</h5>
+              <div className="flex justify-between">
+                <p>Greenwich Vietnam</p>
+                <p>Hanoi, Vietnam</p>
+              </div>
               <p className="caption text-sm">2019 - 2024</p>
-              <ul className="list-inside list-disc text-sm">
-                <li>GPA 70/100</li>
+              <ul className="mt-1 list-inside list-disc text-sm">
+                <li>GPA 68/100</li>
                 <li>Fourth prize in the Greenwich Coding Challenge ver 4</li>
               </ul>
             </div>
           </Card>
         </div>
-        <div id="experience">
-          <h2 className="my-14 text-center">Experience</h2>
+        <div id="experience" className="mt-8">
+          <h2 className="mb-8 text-center">Experience</h2>
           <div className="grid justify-items-center">
-            <Card className="flex gap-x-4 transition-all duration-200 hover:-translate-y-2 hover:transform hover:shadow-md">
-              <a href="">
-                <img src={greenwich} className="w-20" alt="greenwich university" />
-              </a>
-              <div>
-                <h3>Greenwich Việt Nam</h3>
-                <p>B.S. Computer Engineering</p>
-                <p>2019 - 2024</p>
+            <Card className="transition-all duration-200 hover:-translate-y-2 hover:transform hover:shadow-md">
+              <h5>Flutter Intern</h5>
+              <div className="flex justify-between">
+                <p>Toshiba Software Development</p>
+                <p>Hanoi, Vietnam</p>
               </div>
+              <p className="caption text-sm">Aug - Dec 2024</p>
+              <ul className="mt-1 list-inside list-disc text-sm">
+                <li>
+                  Collaborated with other students to develop a mobile app for health and
+                  fitness tracking
+                </li>
+                <li>Developed the user interface for the app using Flutter</li>
+                <li>
+                  Integrated the application with fitness tracking and analytics modules
+                </li>
+              </ul>
             </Card>
           </div>
         </div>
       </section>
       <section id="skills" className="min-h-dvh pt-8">
         <h2 className="mb-14 text-center">Skills</h2>
-        <div className="grid grid-cols-2 gap-12">
+        <div className="grid grid-cols-2 gap-8">
           {skills.map((item, idx) => (
             <Card
               key={idx}

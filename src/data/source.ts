@@ -32,7 +32,7 @@ export const skills: Skill[] = [
   {
     name: 'Frontend',
     image: frontend,
-    tech: ['ReactJS', 'Flutter', 'Bootstrap', 'Tailwind CSS', 'daisyUI'],
+    tech: ['ReactJS', 'Flutter', 'Android', 'Bootstrap', 'Tailwind CSS', 'daisyUI'],
   },
   {
     name: 'Backend',
@@ -47,7 +47,7 @@ export const skills: Skill[] = [
   {
     name: 'Other tools',
     image: tool,
-    tech: ['Google Cloud', 'Firebase', 'Git', 'Agile Scrum'],
+    tech: ['GCP', 'Firebase', 'Git', 'Agile Scrum'],
   },
 ]
 
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     name: 'Green Showcase (backend)',
     description:
       'A backend system for managing and showcasing graduation projects from all majors at Greenwich Vietnam University, ensuring reliable APIs and secure data processing.',
-    hashtags: ['Express', 'MySQL', 'Firebase', 'Redis', 'Google Cloud'],
+    hashtags: ['Express', 'MySQL', 'Firebase', 'Redis', 'GCP'],
     images: [greenshowcase_signin, greenshowcase_detail],
     descUrl: 'https://github.com/TripleVi/be-graduation-showcase/blob/main/README.md',
     source: 'https://github.com/TripleVi/be-graduation-showcase',
@@ -128,13 +128,13 @@ export const projects: Project[] = [
 ]
 
 export const CVLink =
-  'https://drive.google.com/file/d/1iertLOskpRwPm0hYCNe-dL1VLH02vawm/view?usp=drive_link'
+  'https://drive.google.com/file/d/1G8JBZphWXZIy8gcqrJf8DdAhwdefirEv/view?usp=sharing'
 
 export const FBLink = 'https://www.facebook.com/vuongvv3'
 
 export const GitHubLink = 'https://github.com/TripleVi'
 
-export const LinkedInLink = ''
+export const LinkedInLink = 'https://www.linkedin.com/in/vuongvv'
 
 export const email = 'vuongvv.it.work@gmail.com'
 
