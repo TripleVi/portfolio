@@ -47,7 +47,7 @@ export const skills: Skill[] = [
   {
     name: 'Other tools',
     image: tool,
-    tech: ['GCP', 'Firebase', 'Git', 'Agile Scrum'],
+    tech: ['GCP', 'Firebase', 'Git', 'Docker', 'Agile Scrum'],
   },
 ]
 
