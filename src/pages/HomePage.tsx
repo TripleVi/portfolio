@@ -96,7 +96,7 @@ const HomePage = () => {
               <p className="caption text-sm">Aug - Dec 2024</p>
               <ul className="mt-1 list-inside list-disc text-sm">
                 <li>
-                  Collaborated with other students to develop a mobile app for health and
+                  Collaborated with other members to develop a mobile app for health and
                   fitness tracking
                 </li>
                 <li>Developed the user interface for the app using Flutter</li>
