@@ -48,8 +48,8 @@ const Header = () => {
             EmptyV
           </Link>
         </div>
-        <div className="navbar-center flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-center w-[60%] sm:w-fit">
+          <ul className="menu menu-horizontal px-1 flex-wrap justify-center">
             <li>
               <a href="#about">About</a>
             </li>

@@ -27,7 +27,7 @@ const HomePage = () => {
     <>
       <section id="about" className="min-h-dvh pt-24">
         <Card>
-          <div className="flex">
+          <div className="flex flex-wrap gap-8">
             <div className="flex-1">
               <h1>
                 Hi. I'm <span className="text-primary">Vuong Vu</span>
@@ -35,7 +35,7 @@ const HomePage = () => {
               <h5 className='mt-2 mb-6 text-primary'>Software Engineer</h5>
               <p className="text-justify whitespace-pre-wrap">{description}</p>
             </div>
-            <div className="grid w-2/5 place-items-center">
+            <div className="grid w-full lg:w-2/5 place-items-center">
               <div className="avatar">
                 <div className="ring-primary ring-offset-base-100 w-64 rounded-full ring-2 ring-offset-2">
                   <img src={avatar} alt="avatar" className="" />
@@ -110,7 +110,7 @@ const HomePage = () => {
       </section>
       <section id="skills" className="min-h-dvh pt-8">
         <h2 className="mb-14 text-center">Skills</h2>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-8">
           {skills.map((item, idx) => (
             <Card
               key={idx}
@@ -133,7 +133,7 @@ const HomePage = () => {
       </section>
       <section id="projects" className="min-h-dvh pt-8">
         <h2 className="mb-14 text-center">Projects</h2>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((item, i) => (
             <div
               key={i}

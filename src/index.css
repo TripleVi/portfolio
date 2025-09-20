@@ -84,13 +84,13 @@
 
 @utility container {
   @media (width >= 40rem /* 640px */) {
-    max-width: 38rem;
+    max-width: 40rem;
   }
   @media (width >= 48rem /* 768px */) {
-    max-width: 45rem;
+    max-width: 48rem;
   }
   @media (width >= 64rem /* 1024px */) {
-    max-width: 62rem;
+    max-width: 64rem;
   }
   @media (width >= 80rem /* 1280px */) {
     max-width: 76rem;
