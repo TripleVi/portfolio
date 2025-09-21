@@ -128,7 +128,7 @@ export const projects: Project[] = [
 ]
 
 export const CVLink =
-  'https://drive.google.com/file/d/1G8JBZphWXZIy8gcqrJf8DdAhwdefirEv/view?usp=sharing'
+  'https://drive.google.com/file/d/1jJysZk-B0I0vohpfI8uoMTX2fXG3TayF/view?usp=drive_link'
 
 export const FBLink = 'https://www.facebook.com/vuongvv3'
 
